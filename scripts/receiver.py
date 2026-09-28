@@ -36,6 +36,16 @@ class H(BaseHTTPRequestHandler):
             postings = payload.get("postings") or []
             if not postings:
                 raise ValueError("no postings")
+            # Sanity floor: never let a truncated or probe payload replace a
+            # good dataset and silently publish an empty calendar.
+            prev = DATA / "details.json"
+            if prev.exists():
+                n_prev = len(json.loads(prev.read_text()))
+                if len(postings) < n_prev * 0.5:
+                    raise ValueError(
+                        f"refusing {len(postings)} postings; last good run had "
+                        f"{n_prev}. Re-run the bookmarklet, or delete "
+                        f"data/details.json to override.")
         except Exception as e:
             self.send_response(400); self._cors(); self.end_headers()
             self.wfile.write(str(e).encode()); return

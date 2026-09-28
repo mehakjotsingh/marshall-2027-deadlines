@@ -28,6 +28,15 @@ def main():
         print("export contained no postings", file=sys.stderr)
         return 1
 
+    prev = DATA / "details.json"
+    if prev.exists():
+        n_prev = len(json.loads(prev.read_text()))
+        if len(postings) < n_prev * 0.5:
+            print(f"refusing {len(postings)} postings; last good run had {n_prev}. "
+                  f"Re-run the bookmarklet, or delete data/details.json to override.",
+                  file=sys.stderr)
+            return 1
+
     stamp = (DATA / "last_export.txt")
     pulled = payload.get("pulled", "")
     if stamp.exists() and stamp.read_text().strip() == pulled:
