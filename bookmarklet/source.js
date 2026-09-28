@@ -44,8 +44,21 @@
     note.textContent = 'Fetching ' + out.length + ' / ' + items.length + '...';
   }
 
-  const blob = new Blob([JSON.stringify({ pulled: new Date().toISOString(), postings: out })],
-                        { type: 'application/json' });
+  const body = JSON.stringify({ pulled: new Date().toISOString(), postings: out });
+
+  // Preferred path: hand off to the local receiver, so there is no file dialog.
+  try {
+    const resp = await fetch('http://127.0.0.1:8787/', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body
+    });
+    if (resp.ok) {
+      note.textContent = 'Sent ' + out.length + ' postings. Publishing...';
+      setTimeout(() => note.remove(), 6000);
+      return;
+    }
+  } catch (e) { /* receiver not running -- fall through to download */ }
+
+  const blob = new Blob([body], { type: 'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = '12twenty-export.json';

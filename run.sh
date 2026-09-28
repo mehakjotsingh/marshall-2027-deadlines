@@ -13,8 +13,12 @@ echo "=== $(date '+%Y-%m-%d %H:%M:%S') ==="
 
 notify() { osascript -e "display notification \"$2\" with title \"$1\""; }
 
-$PY scripts/ingest.py
-rc=$?
+if [ "$1" = "--already-ingested" ]; then
+  rc=0                      # receiver.py staged data/details.json for us
+else
+  $PY scripts/ingest.py
+  rc=$?
+fi
 [ $rc -eq 3 ] && { echo "nothing new"; exit 0; }
 [ $rc -ne 0 ] && { notify "Marshall 2027" "Ingest failed - see data/run.log"; exit $rc; }
 

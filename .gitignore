@@ -3,3 +3,9 @@ __pycache__/
 chrome-profile/
 *.pyc
 .DS_Store
+data/exports/
+data/details.json
+data/classified.json
+data/new_ids.json
+data/*.log
+data/*.err

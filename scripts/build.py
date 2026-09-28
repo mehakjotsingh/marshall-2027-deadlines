@@ -13,16 +13,21 @@ def esc(s):
 
 
 def fold(line):
-    b = line.encode("utf-8")
-    out, cur = [], b""
-    for i in range(len(b)):
-        ch = b[i:i + 1]
-        if len(cur) + len(ch) > 73:
+    """RFC 5545 line folding at <=75 octets.
+
+    Must never split a multi-byte character across a fold, so we measure each
+    CHARACTER's encoded width instead of slicing raw bytes.
+    """
+    out, cur, width = [], "", 0
+    for ch in line:
+        w = len(ch.encode("utf-8"))
+        if width + w > 73:
             out.append(cur)
-            cur = b" "
+            cur, width = " ", 1
         cur += ch
+        width += w
     out.append(cur)
-    return b"\r\n".join(out).decode("utf-8")
+    return "\r\n".join(out)
 
 
 def deadline_pt(iso):
