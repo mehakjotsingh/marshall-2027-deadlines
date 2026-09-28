@@ -44,6 +44,15 @@ BODY_POS = [re.compile(p, I) for p in (
     r"\bfull[- ]time[^.]{0,65}\b2027\b",
     r"\b(?:degree|qualification|completion|diploma)\b[^.]{0,85}\b2027\b")]
 
+SENIOR = re.compile(
+    r"\b(senior|sr\.?|director|principal|vp|vice president|head of|chief|executive)\b", I)
+YEARS = re.compile(r"(\d+)\s*\+?\s*(?:-\s*\d+\s*)?years?[^.]{0,40}experience", I)
+MAX_YEARS_FOR_MAYBE = 5
+# "...solving infrastructure challenges for more than 85 years with a legacy of
+# expertise, experience" parses as an 85-year requirement. Anything above this is
+# company age or boilerplate, not a hiring bar.
+MAX_PLAUSIBLE_YEARS = 25
+
 _TAG = re.compile(r"<[^>]*>")
 _ENT = {"&nbsp;": " ", "&amp;": "&", "&#39;": "'", "&rsquo;": "'",
         "&quot;": '"', "&lsquo;": "'", "&ldquo;": '"', "&rdquo;": '"', "&ndash;": "-"}
@@ -95,13 +104,24 @@ def classify(d):
         return None, "no explicit all-accepted"
 
     if _any(title, TITLE_POS):
-        why = "2027 in title"
+        why, tier = "2027 in title", "firm"
     elif _any(body, BODY_POS):
-        why = "2027 grad/start requirement in description"
+        why, tier = "2027 grad/start requirement in description", "firm"
     else:
-        return None, "no 2027 signal"
+        # No stated year. Keep it as a softer "worth a look" tier if it is not
+        # obviously a senior or experienced hire -- job descriptions are often
+        # just silent about graduation year rather than genuinely irrelevant.
+        if SENIOR.search(title):
+            return None, "no 2027 signal (senior title)"
+        yrs = [int(m) for m in YEARS.findall(body) if int(m) <= MAX_PLAUSIBLE_YEARS]
+        if yrs and max(yrs) >= MAX_YEARS_FOR_MAYBE:
+            return None, f"no 2027 signal ({max(yrs)}+ yrs experience)"
+        why = (f"no year stated; {max(yrs)}-yr experience ask" if yrs
+               else "no year stated; no seniority signal")
+        tier = "maybe"
 
     return {
+        "tier": tier,
         "id": str(d["Id"]),
         "employer": d.get("CompanyName") or "",
         "title": title,
