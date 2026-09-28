@@ -1,0 +1,26 @@
+<!doctype html><meta charset=utf-8>
+<title>Install the 12twenty export bookmarklet</title>
+<style>
+body{font:15px/1.6 -apple-system,system-ui,sans-serif;max-width:640px;margin:48px auto;padding:0 20px;
+color:#16181d;background:#fff}
+@media(prefers-color-scheme:dark){body{background:#14161a;color:#e8eaed}}
+a.bm{display:inline-block;background:#990000;color:#fff;padding:12px 22px;border-radius:8px;
+text-decoration:none;font-weight:600;font-size:16px;cursor:grab}
+ol{padding-left:20px} li{margin:10px 0} code{background:#8881;padding:2px 6px;border-radius:4px}
+.note{color:#666;font-size:14px;border-left:3px solid #8884;padding-left:14px;margin-top:28px}
+@media(prefers-color-scheme:dark){.note{color:#9aa4b2}}
+</style>
+<h1>12twenty export</h1>
+<ol>
+<li>Show the bookmarks bar: <code>&#8984;&#8679;B</code></li>
+<li><strong>Drag</strong> this button onto the bookmarks bar (dragging, not clicking, is what installs it):<br><br>
+<a class=bm href="javascript:(async%20()%20=%3E%20{%20const%20H%20=%20location.origin;%20if%20(!/marshall-usc%5C.12twenty%5C.com/.test(H))%20{%20alert(&#x27;Open%20a%2012twenty%20tab%20first,%20then%20click%20this.&#x27;);%20return;%20}%20const%20note%20=%20document.createElement(&#x27;div&#x27;);%20note.style.cssText%20=%20&#x27;position:fixed;z-index:2147483647;top:14px;right:14px;background:#990000;&#x27;%20+%20&#x27;color:#fff;padding:11px%2016px;border-radius:8px;font:14px%20system-ui;box-shadow:0%204px%2014px%20rgba(0,0,0,.3)&#x27;;%20note.textContent%20=%20&#x27;Fetching%20listings...&#x27;;%20document.body.appendChild(note);%20const%20payload%20=%20{%20ShouldCalculateTotal:%20true,%20PageNumber:%201,%20PageSize:%201000,%20IsSortAsc:%20false,%20sortBy:%201,%20locationFilter:%20&#x27;City&#x27;,%20StudentGroupIds:%20[],%20Filters:%20[{%20SelectedIds:%20[3,%204],%20CustomFilterTypeId:%2016,%20TypeId:%203,%20HasValue:%20true,%20IsExcluded:%20false,%20DisplayIndex:%2010%20}]%20};%20const%20r%20=%20await%20fetch(H%20+%20&#x27;/Api/V2/job-postings/post-query&#x27;,%20{%20method:%20&#x27;POST&#x27;,%20headers:%20{%20&#x27;Content-Type&#x27;:%20&#x27;application/json&#x27;%20},%20body:%20JSON.stringify(payload)%20});%20if%20(!r.ok)%20{%20note.textContent%20=%20&#x27;Not%20signed%20in%20(HTTP%20&#x27;%20+%20r.status%20+%20&#x27;)&#x27;;%20return;%20}%20const%20items%20=%20(await%20r.json()).Items%20||%20[];%20const%20keep%20=%20d%20=%3E%20({%20Id:%20d.Id,%20CompanyName:%20d.CompanyName,%20JobTitle:%20d.JobTitle,%20Description:%20d.Description,%20ApplicationDeadlineDate:%20d.ApplicationDeadlineDate,%20JobPostingJobTypeNames:%20d.JobPostingJobTypeNames,%20ContactName:%20d.ContactName,%20RequiredWorkAuthName:%20d.RequiredWorkAuthName,%20WorkAuthRequirements:%20d.WorkAuthRequirements,%20Url:%20d.Url%20});%20const%20out%20=%20[];%20for%20(let%20i%20=%200;%20i%20%3C%20items.length;%20i%20+=%2010)%20{%20await%20Promise.all(items.slice(i,%20i%20+%2010).map(async%20it%20=%3E%20{%20try%20{%20const%20d%20=%20await%20(await%20fetch(H%20+%20&#x27;/Api/V2/job-postings/&#x27;%20+%20it.Id)).json();%20out.push(keep(d));%20}%20catch%20(e)%20{}%20}));%20note.textContent%20=%20&#x27;Fetching%20&#x27;%20+%20out.length%20+%20&#x27;%20/%20&#x27;%20+%20items.length%20+%20&#x27;...&#x27;;%20}%20const%20blob%20=%20new%20Blob([JSON.stringify({%20pulled:%20new%20Date().toISOString(),%20postings:%20out%20})],%20{%20type:%20&#x27;application/json&#x27;%20});%20const%20a%20=%20document.createElement(&#x27;a&#x27;);%20a.href%20=%20URL.createObjectURL(blob);%20a.download%20=%20&#x27;12twenty-export.json&#x27;;%20document.body.appendChild(a);%20a.click();%20a.remove();%20note.textContent%20=%20&#x27;Saved%20&#x27;%20+%20out.length%20+%20&#x27;%20postings%20to%20Downloads&#x27;;%20setTimeout(()%20=%3E%20note.remove(),%206000);%20})();">Export 12twenty</a></li>
+<li>Open 12twenty and sign in.</li>
+<li>Click the bookmark. It fetches every open posting and saves
+<code>12twenty-export.json</code> to Downloads.</li>
+</ol>
+<p>A watcher picks the file up automatically, screens it, and publishes the calendar.
+You do not need to do anything else.</p>
+<p class=note>This runs entirely in your own signed-in browser using the session you
+already have. It stores no credentials and works around no protections &mdash; which is
+exactly why the fetch has to be a click you make, rather than something scheduled.</p>
