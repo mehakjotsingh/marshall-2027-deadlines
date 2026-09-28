@@ -91,7 +91,7 @@ a{{color:var(--acc)}} footer{{color:var(--mut);font-size:13px;margin-top:28px}}
 <h1>Marshall 2027 Recruiting Deadlines</h1>
 <p class=sub>On-cycle full-time roles for the Class of 2027 that accept sponsorship.
 Auto-updated from 12twenty. All deadlines 11:59 PM PT.</p>
-<a class=sub-btn href="webcal://REPLACE_HOST/deadlines.ics">Subscribe in Calendar</a>
+<a class=sub-btn href="webcal://mehakjotsingh.github.io/marshall-2027-deadlines/deadlines.ics">Subscribe in Calendar</a>
 <table>{''.join(trs)}</table>
 <footer>{len(rows)} roles &middot; updated {updated}
 &middot; postings require a Marshall 12twenty login</footer>"""

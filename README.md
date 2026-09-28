@@ -6,7 +6,7 @@ that are open to visa sponsorship**, screened from 12twenty.
 Subscribe once; new postings appear in your calendar automatically:
 
 ```
-webcal://<user>.github.io/marshall-2027-deadlines/deadlines.ics
+webcal://mehakjotsingh.github.io/marshall-2027-deadlines/deadlines.ics
 ```
 
 ## Why the data pull is a click, not a cron job
