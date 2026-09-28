@@ -91,12 +91,18 @@ table{{border-collapse:collapse;width:100%}}
 td{{padding:11px 8px;border-bottom:1px solid var(--line);vertical-align:top}}
 td.d{{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--mut);width:88px}}
 td.n{{color:var(--mut);font-size:13px}}
-a{{color:var(--acc)}} footer{{color:var(--mut);font-size:13px;margin-top:28px}}
+a{{color:var(--acc)}}
+p.alt{{color:var(--mut);font-size:13px;margin:-10px 0 22px}}
+code.url{{display:inline-block;background:#8881;padding:7px 10px;border-radius:5px;font-size:12px;word-break:break-all;margin-top:6px;user-select:all}} footer{{color:var(--mut);font-size:13px;margin-top:28px}}
 </style>
 <h1>Marshall 2027 Recruiting Deadlines</h1>
 <p class=sub>On-cycle full-time roles for the Class of 2027 that accept sponsorship.
 Auto-updated from 12twenty. All deadlines 11:59 PM PT.</p>
 <a class=sub-btn href="webcal://mehakjotsingh.github.io/marshall-2027-deadlines/deadlines.ics">Subscribe in Calendar</a>
+<p class=alt>Button not working? Copy this URL and add it manually &mdash;
+Apple Calendar: <em>File &rsaquo; New Calendar Subscription</em>.
+Google Calendar: <em>Other calendars &rsaquo; From URL</em>.<br>
+<code class=url>https://mehakjotsingh.github.io/marshall-2027-deadlines/deadlines.ics</code></p>
 <table>{''.join(trs)}</table>
 <footer>{len(rows)} roles &middot; updated {updated}
 &middot; postings require a Marshall 12twenty login</footer>"""
