@@ -29,6 +29,7 @@
   const keep = d => ({
     Id: d.Id, CompanyName: d.CompanyName, JobTitle: d.JobTitle,
     Description: d.Description, ApplicationDeadlineDate: d.ApplicationDeadlineDate,
+    ApplicationStartDate: d.ApplicationStartDate, PostedDate: d.PostedDate,
     JobPostingJobTypeNames: d.JobPostingJobTypeNames, ContactName: d.ContactName,
     RequiredWorkAuthName: d.RequiredWorkAuthName,
     WorkAuthRequirements: d.WorkAuthRequirements, Url: d.Url

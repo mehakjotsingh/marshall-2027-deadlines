@@ -38,6 +38,18 @@ def deadline_pt(iso):
     return dt.astimezone(PACIFIC)
 
 
+def opened_date(iso):
+    """Opening dates are date-only (T00:00:00) and must NOT be shifted from UTC,
+    unlike deadlines which are real UTC timestamps (06:59Z = 23:59 PT prior day).
+    PostedDate does carry a real time, so that one is converted."""
+    if not iso:
+        return None
+    dt = datetime.datetime.fromisoformat(iso)
+    if (dt.hour, dt.minute, dt.second) == (0, 0, 0):
+        return dt                                    # already a local calendar date
+    return dt.replace(tzinfo=datetime.timezone.utc).astimezone(PACIFIC)
+
+
 def build_ics(rows):
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     L = ["BEGIN:VCALENDAR", "VERSION:2.0",
@@ -53,7 +65,10 @@ def build_ics(rows):
         start = d.strftime("%Y%m%d")
         end = (d + datetime.timedelta(days=1)).strftime("%Y%m%d")
         url = config.JOB_URL.format(id=r["id"])
+        op = opened_date(r.get("opened"))
+        opened_line = f"\\nOpened: {op.strftime('%a %b %d, %Y')}" if op else ""
         desc = (f"{esc(r['title'])}\\n\\nDeadline: 11:59 PM PT on {d.strftime('%a %b %d, %Y')}"
+                f"{opened_line}"
                 f"\\n{esc(r['auth_note'])}\\n{esc(r['why'])}\\n\\n12twenty (Marshall login required):\\n{url}")
         L += ["BEGIN:VEVENT", f"UID:marshall2027-{r['id']}@12twenty.local",
               f"DTSTAMP:{stamp}", f"DTSTART;VALUE=DATE:{start}", f"DTEND;VALUE=DATE:{end}",
@@ -71,8 +86,10 @@ def build_html(rows, updated):
     trs = []
     for r in sorted(rows, key=lambda x: x["deadline"] or ""):
         d = deadline_pt(r["deadline"])
+        op = opened_date(r.get("opened"))
         trs.append(
             f"<tr><td class=d>{d.strftime('%a %b %-d') if d else '--'}</td>"
+            f"<td class=o>{op.strftime('%b %-d') if op else '--'}</td>"
             f"<td><strong>{html.escape(r['employer'])}</strong><br>"
             f"<a href='{html.escape(config.JOB_URL.format(id=r['id']))}'>{html.escape(r['title'])}</a></td>"
             f"<td class=n>{html.escape(r['why'])}</td></tr>")
@@ -91,6 +108,8 @@ table{{border-collapse:collapse;width:100%}}
 td{{padding:11px 8px;border-bottom:1px solid var(--line);vertical-align:top}}
 td.d{{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--mut);width:88px}}
 td.n{{color:var(--mut);font-size:13px}}
+td.o{{white-space:nowrap;color:var(--mut);font-size:13px;width:66px}}
+th{{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);padding:0 8px 8px;border-bottom:1px solid var(--line)}}
 a{{color:var(--acc)}}
 p.alt{{color:var(--mut);font-size:13px;margin:-10px 0 22px}}
 code.url{{display:inline-block;background:#8881;padding:7px 10px;border-radius:5px;font-size:12px;word-break:break-all;margin-top:6px;user-select:all}} footer{{color:var(--mut);font-size:13px;margin-top:28px}}
@@ -103,7 +122,7 @@ Auto-updated from 12twenty. All deadlines 11:59 PM PT.</p>
 Apple Calendar: <em>File &rsaquo; New Calendar Subscription</em>.
 Google Calendar: <em>Other calendars &rsaquo; From URL</em>.<br>
 <code class=url>https://mehakjotsingh.github.io/marshall-2027-deadlines/deadlines.ics</code></p>
-<table>{''.join(trs)}</table>
+<table><tr><th>Due</th><th>Opened</th><th>Role</th><th></th></tr>{''.join(trs)}</table>
 <footer>{len(rows)} roles &middot; updated {updated}
 &middot; postings require a Marshall 12twenty login</footer>"""
 

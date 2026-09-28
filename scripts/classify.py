@@ -106,6 +106,7 @@ def classify(d):
         "employer": d.get("CompanyName") or "",
         "title": title,
         "deadline": d.get("ApplicationDeadlineDate"),
+        "opened": d.get("ApplicationStartDate") or d.get("PostedDate"),
         "why": why,
         "auth_note": ("Sponsorship open; STEM-eligible degree required"
                       if STEM in u else "All work authorizations accepted"),
