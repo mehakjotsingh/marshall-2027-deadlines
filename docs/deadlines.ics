@@ -8,7 +8,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:marshall2027-35006705611620@12twenty.local
-DTSTAMP:20260928T191612Z
+DTSTAMP:20261001T001732Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:DUE: World Bank Group - WBG - Young Professional Program - Financ
@@ -30,7 +30,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:marshall2027-35006705585982@12twenty.local
-DTSTAMP:20260928T191612Z
+DTSTAMP:20261001T001732Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:DUE: World Bank Group - WBG - World Bank Group - Young Profession
@@ -52,7 +52,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:marshall2027-35006705626689@12twenty.local
-DTSTAMP:20260928T191612Z
+DTSTAMP:20261001T001732Z
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
 SUMMARY:DUE: The Walt Disney Company - Associate Product Manager Program
@@ -72,29 +72,8 @@ DESCRIPTION:2 days until The Walt Disney Company deadline
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:marshall2027-35006705509047@12twenty.local
-DTSTAMP:20260928T191612Z
-DTSTART;VALUE=DATE:20261003
-DTEND;VALUE=DATE:20261004
-SUMMARY:DUE: Siemens AG - Finance Excellence Program-Associate 2026/2027
-DESCRIPTION:Finance Excellence Program-Associate 2026/2027\n\nDeadline: 1
- 1:59 PM PT on Sat Oct 03, 2026\nAll work authorizations accepted\n2027 i
- n title\n\n12twenty (Marshall login required):\nhttps://marshall-usc.12t
- wenty.com/jobPostings#/jobPostings/35006705509047
-URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670550
- 9047
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-SEQUENCE:0
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P2D
-DESCRIPTION:2 days until Siemens AG deadline
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:marshall2027-35006705509192@12twenty.local
-DTSTAMP:20260928T191612Z
+DTSTAMP:20261001T001732Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:DUE: Siemens AG - XPS Leadership Program 2026/2027
@@ -114,8 +93,29 @@ DESCRIPTION:2 days until Siemens AG deadline
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:marshall2027-35006705509047@12twenty.local
+DTSTAMP:20261001T001732Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+SUMMARY:DUE: Siemens AG - Finance Excellence Program-Associate 2026/2027
+DESCRIPTION:Finance Excellence Program-Associate 2026/2027\n\nDeadline: 1
+ 1:59 PM PT on Sat Oct 03, 2026\nAll work authorizations accepted\n2027 i
+ n title\n\n12twenty (Marshall login required):\nhttps://marshall-usc.12t
+ wenty.com/jobPostings#/jobPostings/35006705509047
+URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670550
+ 9047
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2D
+DESCRIPTION:2 days until Siemens AG deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:marshall2027-35006705606470@12twenty.local
-DTSTAMP:20260928T191612Z
+DTSTAMP:20261001T001732Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:DUE: The Walt Disney Company - Financial Analyst – AFRP
@@ -136,7 +136,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:marshall2027-35006705524705@12twenty.local
-DTSTAMP:20260928T191612Z
+DTSTAMP:20261001T001732Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:DUE: L.E.K. Consulting - U.S. Consultant - 2027
@@ -157,7 +157,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:marshall2027-35006705624113@12twenty.local
-DTSTAMP:20260928T191612Z
+DTSTAMP:20261001T001732Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:DUE: Ryder Supply Chain Solutions - MBA Leadership Development Pr
@@ -179,8 +179,30 @@ DESCRIPTION:2 days until Ryder Supply Chain Solutions deadline
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:marshall2027-35006705659785@12twenty.local
+DTSTAMP:20261001T001732Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:DUE: 2K - 2K Games - Publishing Graduate Program - Novato
+DESCRIPTION:2K Games - Publishing Graduate Program - Novato\n\nDeadline: 
+ 11:59 PM PT on Fri Oct 23, 2026\nAll work authorizations accepted\n2027 
+ grad/start requirement in description\n\n12twenty (Marshall login requir
+ ed):\nhttps://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670
+ 5659785
+URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670565
+ 9785
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2D
+DESCRIPTION:2 days until 2K deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:marshall2027-35006705640421@12twenty.local
-DTSTAMP:20260928T191612Z
+DTSTAMP:20261001T001732Z
 DTSTART;VALUE=DATE:20261025
 DTEND;VALUE=DATE:20261026
 SUMMARY:DUE: Kroll - Analyst\, Site Selection & Incentives Advisory
@@ -202,7 +224,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:marshall2027-35006705641598@12twenty.local
-DTSTAMP:20260928T191612Z
+DTSTAMP:20261001T001732Z
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261027
 SUMMARY:DUE: Gartner - Account Manager (2027 Graduates\, German-speakers)
@@ -223,7 +245,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:marshall2027-35006705647392@12twenty.local
-DTSTAMP:20260928T191612Z
+DTSTAMP:20261001T001732Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:DUE: Adobe - 2027 MBA University Graduate - Product Manager
@@ -243,51 +265,8 @@ DESCRIPTION:2 days until Adobe deadline
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:marshall2027-35006705649628@12twenty.local
-DTSTAMP:20260928T191612Z
-DTSTART;VALUE=DATE:20261030
-DTEND;VALUE=DATE:20261031
-SUMMARY:DUE: M&T Bank - 2027 Commercial Credit Analyst Program - Buffalo
-DESCRIPTION:2027 Commercial Credit Analyst Program - Buffalo\n\nDeadline:
-  11:59 PM PT on Fri Oct 30, 2026\nAll work authorizations accepted\n2027
-  in title\n\n12twenty (Marshall login required):\nhttps://marshall-usc.1
- 2twenty.com/jobPostings#/jobPostings/35006705649628
-URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670564
- 9628
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-SEQUENCE:0
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P2D
-DESCRIPTION:2 days until M&T Bank deadline
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:marshall2027-35006705649643@12twenty.local
-DTSTAMP:20260928T191612Z
-DTSTART;VALUE=DATE:20261030
-DTEND;VALUE=DATE:20261031
-SUMMARY:DUE: M&T Bank - 2027 Commercial Credit Analyst Program - New York
- \, NY
-DESCRIPTION:2027 Commercial Credit Analyst Program - New York\, NY\n\nDea
- dline: 11:59 PM PT on Fri Oct 30, 2026\nAll work authorizations accepted
- \n2027 in title\n\n12twenty (Marshall login required):\nhttps://marshall
- -usc.12twenty.com/jobPostings#/jobPostings/35006705649643
-URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670564
- 9643
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-SEQUENCE:0
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P2D
-DESCRIPTION:2 days until M&T Bank deadline
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:marshall2027-35006705651612@12twenty.local
-DTSTAMP:20260928T191612Z
+DTSTAMP:20261001T001732Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
 SUMMARY:DUE: Western Alliance Bank - 2027 Commercial Banking Development 
@@ -306,6 +285,93 @@ BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P2D
 DESCRIPTION:2 days until Western Alliance Bank deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:marshall2027-35006705653272@12twenty.local
+DTSTAMP:20261001T001732Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:DUE: M&T Bank - 2027 Commercial Credit Analyst Program - Boston
+DESCRIPTION:2027 Commercial Credit Analyst Program - Boston\n\nDeadline: 
+ 11:59 PM PT on Mon Nov 02, 2026\nAll work authorizations accepted\n2027 
+ in title\n\n12twenty (Marshall login required):\nhttps://marshall-usc.12
+ twenty.com/jobPostings#/jobPostings/35006705653272
+URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670565
+ 3272
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2D
+DESCRIPTION:2 days until M&T Bank deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:marshall2027-35006705659117@12twenty.local
+DTSTAMP:20261001T001732Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+SUMMARY:DUE: Hunter Douglas\, Inc. - 2027 MBA Graduate Hire - Strategic P
+ roject
+DESCRIPTION:2027 MBA Graduate Hire - Strategic Project\n\nDeadline: 11:59
+  PM PT on Fri Nov 06, 2026\nAll work authorizations accepted\n2027 in ti
+ tle\n\n12twenty (Marshall login required):\nhttps://marshall-usc.12twent
+ y.com/jobPostings#/jobPostings/35006705659117
+URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670565
+ 9117
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2D
+DESCRIPTION:2 days until Hunter Douglas\, Inc. deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:marshall2027-35006705657346@12twenty.local
+DTSTAMP:20261001T001732Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:DUE: Bank of Singapore\, Asia's Global Private Bank - Wealth Mana
+ gement Associate Programme 2027
+DESCRIPTION:Wealth Management Associate Programme 2027\n\nDeadline: 11:59
+  PM PT on Thu Dec 31, 2026\nAll work authorizations accepted\n2027 in ti
+ tle\n\n12twenty (Marshall login required):\nhttps://marshall-usc.12twent
+ y.com/jobPostings#/jobPostings/35006705657346
+URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670565
+ 7346
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2D
+DESCRIPTION:2 days until Bank of Singapore\, Asia's Global Private Bank d
+ eadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:marshall2027-35006705659816@12twenty.local
+DTSTAMP:20261001T001732Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:DUE: Force Factor - MBA Leadership Development Associate
+DESCRIPTION:MBA Leadership Development Associate\n\nDeadline: 11:59 PM PT
+  on Sun Jan 31, 2027\nAll work authorizations accepted\n2027 grad/start 
+ requirement in description\n\n12twenty (Marshall login required):\nhttps
+ ://marshall-usc.12twenty.com/jobPostings#/jobPostings/35006705659816
+URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670565
+ 9816
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2D
+DESCRIPTION:2 days until Force Factor deadline
 END:VALARM
 END:VEVENT
 END:VCALENDAR
