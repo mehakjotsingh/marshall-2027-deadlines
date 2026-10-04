@@ -7,50 +7,8 @@ X-WR-CALNAME:Marshall 2027 Recruiting Deadlines
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:marshall2027-35006705509192@12twenty.local
-DTSTAMP:20261004T013208Z
-DTSTART;VALUE=DATE:20261003
-DTEND;VALUE=DATE:20261004
-SUMMARY:DUE: Siemens AG - XPS Leadership Program 2026/2027
-DESCRIPTION:XPS Leadership Program 2026/2027\n\nDeadline: 11:59 PM PT on 
- Sat Oct 03, 2026\nAll work authorizations accepted\n2027 in title\n\n12t
- wenty (Marshall login required):\nhttps://marshall-usc.12twenty.com/jobP
- ostings#/jobPostings/35006705509192
-URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670550
- 9192
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-SEQUENCE:0
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P2D
-DESCRIPTION:2 days until Siemens AG deadline
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:marshall2027-35006705509047@12twenty.local
-DTSTAMP:20261004T013208Z
-DTSTART;VALUE=DATE:20261003
-DTEND;VALUE=DATE:20261004
-SUMMARY:DUE: Siemens AG - Finance Excellence Program-Associate 2026/2027
-DESCRIPTION:Finance Excellence Program-Associate 2026/2027\n\nDeadline: 1
- 1:59 PM PT on Sat Oct 03, 2026\nAll work authorizations accepted\n2027 i
- n title\n\n12twenty (Marshall login required):\nhttps://marshall-usc.12t
- wenty.com/jobPostings#/jobPostings/35006705509047
-URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670550
- 9047
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-SEQUENCE:0
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P2D
-DESCRIPTION:2 days until Siemens AG deadline
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:marshall2027-35006705606470@12twenty.local
-DTSTAMP:20261004T013208Z
+DTSTAMP:20261004T163824Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:DUE: The Walt Disney Company - Financial Analyst – AFRP
@@ -71,7 +29,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:marshall2027-35006705524705@12twenty.local
-DTSTAMP:20261004T013208Z
+DTSTAMP:20261004T163824Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:DUE: L.E.K. Consulting - U.S. Consultant - 2027
@@ -92,7 +50,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:marshall2027-35006705624113@12twenty.local
-DTSTAMP:20261004T013208Z
+DTSTAMP:20261004T163824Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:DUE: Ryder Supply Chain Solutions - MBA Leadership Development Pr
@@ -114,29 +72,8 @@ DESCRIPTION:2 days until Ryder Supply Chain Solutions deadline
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:marshall2027-35006705660684@12twenty.local
-DTSTAMP:20261004T013208Z
-DTSTART;VALUE=DATE:20261023
-DTEND;VALUE=DATE:20261024
-SUMMARY:DUE: Zynga - Rotational Product Manager
-DESCRIPTION:Rotational Product Manager\n\nDeadline: 11:59 PM PT on Fri Oc
- t 23, 2026\nAll work authorizations accepted\n2027 grad/start requiremen
- t in description\n\n12twenty (Marshall login required):\nhttps://marshal
- l-usc.12twenty.com/jobPostings#/jobPostings/35006705660684
-URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670566
- 0684
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-SEQUENCE:0
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P2D
-DESCRIPTION:2 days until Zynga deadline
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:marshall2027-35006705659785@12twenty.local
-DTSTAMP:20261004T013208Z
+DTSTAMP:20261004T163824Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
 SUMMARY:DUE: 2K - 2K Games - Publishing Graduate Program - Novato
@@ -157,8 +94,29 @@ DESCRIPTION:2 days until 2K deadline
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:marshall2027-35006705660684@12twenty.local
+DTSTAMP:20261004T163824Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:DUE: Zynga - Rotational Product Manager
+DESCRIPTION:Rotational Product Manager\n\nDeadline: 11:59 PM PT on Fri Oc
+ t 23, 2026\nAll work authorizations accepted\n2027 grad/start requiremen
+ t in description\n\n12twenty (Marshall login required):\nhttps://marshal
+ l-usc.12twenty.com/jobPostings#/jobPostings/35006705660684
+URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670566
+ 0684
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2D
+DESCRIPTION:2 days until Zynga deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:marshall2027-35006705640421@12twenty.local
-DTSTAMP:20261004T013208Z
+DTSTAMP:20261004T163824Z
 DTSTART;VALUE=DATE:20261025
 DTEND;VALUE=DATE:20261026
 SUMMARY:DUE: Kroll - Analyst\, Site Selection & Incentives Advisory
@@ -180,7 +138,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:marshall2027-35006705641598@12twenty.local
-DTSTAMP:20261004T013208Z
+DTSTAMP:20261004T163824Z
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261027
 SUMMARY:DUE: Gartner - Account Manager (2027 Graduates\, German-speakers)
@@ -201,7 +159,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:marshall2027-35006705647392@12twenty.local
-DTSTAMP:20261004T013208Z
+DTSTAMP:20261004T163824Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:DUE: Adobe - 2027 MBA University Graduate - Product Manager
@@ -221,31 +179,8 @@ DESCRIPTION:2 days until Adobe deadline
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:marshall2027-35006705651612@12twenty.local
-DTSTAMP:20261004T013208Z
-DTSTART;VALUE=DATE:20261031
-DTEND;VALUE=DATE:20261101
-SUMMARY:DUE: Western Alliance Bank - 2027 Commercial Banking Development 
- Program - Credit Analyst - Atlanta\, GA - Commercial Banking Technology
-DESCRIPTION:2027 Commercial Banking Development Program - Credit Analyst 
- - Atlanta\, GA - Commercial Banking Technology\n\nDeadline: 11:59 PM PT 
- on Sat Oct 31, 2026\nAll work authorizations accepted\n2027 in title\n\n
- 12twenty (Marshall login required):\nhttps://marshall-usc.12twenty.com/j
- obPostings#/jobPostings/35006705651612
-URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670565
- 1612
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-SEQUENCE:0
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P2D
-DESCRIPTION:2 days until Western Alliance Bank deadline
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:marshall2027-35006705653272@12twenty.local
-DTSTAMP:20261004T013208Z
+DTSTAMP:20261004T163824Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:DUE: M&T Bank - 2027 Commercial Credit Analyst Program - Boston
@@ -265,8 +200,50 @@ DESCRIPTION:2 days until M&T Bank deadline
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:marshall2027-35006705509192@12twenty.local
+DTSTAMP:20261004T163824Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:DUE: Siemens AG - XPS Leadership Program 2026/2027
+DESCRIPTION:XPS Leadership Program 2026/2027\n\nDeadline: 11:59 PM PT on 
+ Tue Nov 03, 2026\nAll work authorizations accepted\n2027 in title\n\n12t
+ wenty (Marshall login required):\nhttps://marshall-usc.12twenty.com/jobP
+ ostings#/jobPostings/35006705509192
+URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670550
+ 9192
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2D
+DESCRIPTION:2 days until Siemens AG deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:marshall2027-35006705509047@12twenty.local
+DTSTAMP:20261004T163824Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:DUE: Siemens AG - Finance Excellence Program-Associate 2026/2027
+DESCRIPTION:Finance Excellence Program-Associate 2026/2027\n\nDeadline: 1
+ 1:59 PM PT on Tue Nov 03, 2026\nAll work authorizations accepted\n2027 i
+ n title\n\n12twenty (Marshall login required):\nhttps://marshall-usc.12t
+ wenty.com/jobPostings#/jobPostings/35006705509047
+URL:https://marshall-usc.12twenty.com/jobPostings#/jobPostings/3500670550
+ 9047
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2D
+DESCRIPTION:2 days until Siemens AG deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:marshall2027-35006705659117@12twenty.local
-DTSTAMP:20261004T013208Z
+DTSTAMP:20261004T163824Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:DUE: Hunter Douglas\, Inc. - 2027 MBA Graduate Hire - Strategic P
@@ -288,7 +265,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:marshall2027-35006705657346@12twenty.local
-DTSTAMP:20261004T013208Z
+DTSTAMP:20261004T163824Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:DUE: Bank of Singapore\, Asia's Global Private Bank - Wealth Mana
@@ -311,7 +288,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:marshall2027-35006705659816@12twenty.local
-DTSTAMP:20261004T013208Z
+DTSTAMP:20261004T163824Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:DUE: Force Factor - MBA Leadership Development Associate
